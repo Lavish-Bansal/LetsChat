@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000');
+const socket = io('https://intense-woodland-10014.herokuapp.com/');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp')
