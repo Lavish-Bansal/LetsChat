@@ -14,15 +14,17 @@ const append = (message, position) =>{
     if(position == 'left'){
         audio.play();
     }
-    messagecontainer.scrollTop = messagecontainer.scrollHeight; 
+    messagecontainer.scrollTop = messagecontainer.scrollHeight;
 }
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
     const message = messageInput.value;
-    append(`You: ${message}`, 'right');
-    socket.emit('send', message);
-    messageInput.value = ''
+    if (message!=""){
+        append(`You: ${message}`, 'right');
+        socket.emit('send', message);
+        messageInput.value = ''
+    }
 })
 
 const name = prompt("Enter your name to join");
