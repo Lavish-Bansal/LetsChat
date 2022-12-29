@@ -1,4 +1,4 @@
-const socket = io('https://intense-woodland-10014.herokuapp.com/');
+const socket = io('https://letschat.onrender.com');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp')
